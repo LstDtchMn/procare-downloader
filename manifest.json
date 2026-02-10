@@ -1,0 +1,27 @@
+{
+  "manifest_version": 3,
+  "name": "Procare Downloader v1.0",
+  "version": "1.0",
+  "description": "Smart media downloader with memory, calendar mapping, and error protection.",
+  "permissions": [
+    "activeTab",
+    "scripting",
+    "downloads",
+    "webRequest",
+    "storage"
+  ],
+  "host_permissions": [
+    "https://api-school.procareconnect.com/*",
+    "https://schools.procareconnect.com/*"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": "icon.png"
+  },
+  "icons": {
+    "128": "icon.png"
+  }
+}

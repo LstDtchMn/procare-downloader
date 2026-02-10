@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <style>
+    body { width: 320px; padding: 15px; font-family: sans-serif; background: #f8f9fa; }
+    
+    .header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px; }
+    h2 { margin: 0; color: #2c3e50; font-size: 18px; }
+    
+    #helpBtn { background: none; border: 1px solid #bdc3c7; color: #7f8c8d; border-radius: 50%; width: 24px; height: 24px; cursor: pointer; font-weight: bold; font-size: 12px; padding: 0; line-height: 22px; }
+    #helpBtn:hover { background: #ecf0f1; color: #2c3e50; border-color: #95a5a6; }
+
+    label { font-size: 12px; font-weight: bold; color: #555; display: block; margin-top: 10px; }
+    input { width: 100%; padding: 8px; margin-top: 5px; box-sizing: border-box; border: 1px solid #ddd; border-radius: 4px; }
+    
+    /* Folder Input Style */
+    #folderName { background: #e8f0fe; border-color: #4285f4; font-family: monospace; }
+    .sub-text { font-size: 10px; color: #7f8c8d; margin-top: 3px; font-style: italic; }
+
+    .action-btn { width: 100%; padding: 10px; margin-top: 8px; border: none; border-radius: 6px; cursor: pointer; color: white; font-weight: bold; font-size: 14px; }
+    .action-btn:hover { opacity: 0.9; }
+    
+    #allBtn { background: #6c5ce7; margin-top: 15px; }
+    #photoBtn { background: #3498db; }
+    #videoBtn { background: #27ae60; }
+    
+    .danger-zone { margin-top: 25px; border-top: 1px solid #ddd; padding-top: 15px; }
+    #purgeBtn { background: #e74c3c; font-size: 12px; padding: 8px; width: 100%; color: white; border: none; border-radius: 6px; cursor: pointer; }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <h2>Procare v1.0</h2>
+    <button id="helpBtn" title="View Documentation">?</button>
+  </div>
+
+  <label>Start Date</label>
+  <input type="date" id="startDate">
+  <label>End Date</label>
+  <input type="date" id="endDate">
+  
+  <label>📁 Save Folder Name</label>
+  <input type="text" id="folderName" value="Procare_Media" placeholder="e.g. MyKids/2026">
+  <div class="sub-text">Files save inside your default Downloads folder</div>
+
+  <button id="allBtn" class="action-btn">🌟 Download Everything</button>
+  <button id="photoBtn" class="action-btn">📸 Photos Only</button>
+  <button id="videoBtn" class="action-btn">🎥 Videos Only</button>
+  
+  <div class="danger-zone">
+    <button id="purgeBtn">🗑️ Purge All History</button>
+  </div>
+  
+  <script src="popup.js"></script>
+</body>
+</html>
